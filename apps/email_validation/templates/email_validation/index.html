@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django E-Mail Validation</title>
+</head>
+<body>
+	{% for message in messages %}
+		<p>{{ message }}</p>
+	{% endfor %}
+	<form action="submit" method="post">
+		<input type="text" name="email">
+		<input type="submit">
+		{% csrf_token %}
+	</form>
+</body>
+</html>
